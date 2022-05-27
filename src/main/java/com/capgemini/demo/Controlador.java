@@ -18,31 +18,16 @@ import org.springframework.web.bind.annotation.RestController;
 public class Controlador {
 
 	@Autowired
-	PersonaService service;
+	JugadorService service;
 
 	@GetMapping
-	public List<Persona> listar() {
-		return service.listar();
+	public List<Jugador> listar() {
+		return service.registrar();
 	}
 
-	@PostMapping
-	public Persona agregar(@RequestBody Persona p) {
-		return service.add(p);
+	@PostMapping(path = { "/id" })
+	public Jugador registrar(@PathVariable("id") int id) {
+		return service.registrar(id);
 	}
 
-	@GetMapping(path = { "/id" })
-	public Persona listarId(@PathVariable("id") int id) {
-		return service.listarId(id);
-	}
-
-	@PutMapping(path = { "/id" })
-	public Persona editar(Persona p, @PathVariable("id") int id) {
-		p.setId(id);
-		return service.edit(p);
-	}
-
-	@DeleteMapping(path = { "/id" })
-	public void delete(@PathVariable("id") int id) {
-		service.delete(id);
-	}
 }
