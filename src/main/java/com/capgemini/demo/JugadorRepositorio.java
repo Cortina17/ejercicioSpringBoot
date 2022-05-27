@@ -1,7 +1,6 @@
 package com.capgemini.demo;
 
 import java.util.List;
-
 import org.springframework.data.repository.Repository;
 
 public interface JugadorRepositorio extends Repository<Jugador, Integer> {
