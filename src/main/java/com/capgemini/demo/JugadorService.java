@@ -8,4 +8,6 @@ public interface JugadorService {
 
 	Jugador registrar(int id);
 
+	Jugador delete(int id);
+
 }

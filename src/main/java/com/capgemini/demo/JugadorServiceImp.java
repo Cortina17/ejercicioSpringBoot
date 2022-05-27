@@ -20,4 +20,9 @@ public class JugadorServiceImp implements JugadorService {
 		return repositorio.findById(id);
 	}
 
+	@Override
+	public Jugador delete(int id) {
+		return null;
+	}
+
 }
