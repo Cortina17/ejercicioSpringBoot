@@ -18,8 +18,7 @@ public class JugadorServiceImp implements JugadorService {
 
 	@Override
 	public Jugador registrar(int id) {
-		// TODO Auto-generated method stub
-		return null;
+		return repositorio.findById(id);
 	}
 
 }
