@@ -21,9 +21,12 @@ public class Jugador {
 
 	@Column
 	private Equipo equipo;
-	
+
 	@Column
 	private Camiseta camiseta;
+
+	public void registrar() {
+	}
 
 	public int getId() {
 		return id;
@@ -56,7 +59,5 @@ public class Jugador {
 	public void setCamiseta(Camiseta camiseta) {
 		this.camiseta = camiseta;
 	}
-
-
 
 }
