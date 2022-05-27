@@ -23,11 +23,10 @@ public class Jugador {
 	private String nombre;
 
 	@Column
-	private Equipo equipo;
+	private String equipo;
 
 	@OneToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "camiseta_id")
-	@Column
 	private Camiseta camiseta;
 
 	public void registrar() {
@@ -49,11 +48,11 @@ public class Jugador {
 		this.nombre = nombre;
 	}
 
-	public Equipo getEquipo() {
+	public String getEquipo() {
 		return equipo;
 	}
 
-	public void setEquipo(Equipo equipo) {
+	public void setEquipo(String equipo) {
 		this.equipo = equipo;
 	}
 
