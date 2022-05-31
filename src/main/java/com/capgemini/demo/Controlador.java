@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -20,18 +21,18 @@ public class Controlador {
 	JugadorService service;
 
 	@GetMapping
-	public List<Jugador> registrar() {
-		return service.registrar();
+	public List<Jugador> listar() {
+		return service.listar();
 	}
 
 	@PostMapping(path = { "/id" })
-	public Jugador registrar(@PathVariable("id") int id) {
-		return service.registrar(id);
+	public Jugador add(@PathVariable("id") int id) {
+		return service.add(id);
 	}
 	
 	@GetMapping
-	public List<Jugador> listar() {
-		return service.registrar();
+	public List<Jugador> add() {
+		return service.add();
 	}
 
 	@PostMapping
@@ -42,6 +43,11 @@ public class Controlador {
 	@GetMapping(path = { "/id" })
 	public Jugador listarId(@PathVariable("id") int id) {
 		return service.listarId(id);
+	}
+	
+	@PutMapping(path = { "/id" })
+	public Jugador edit(@PathVariable("id") int id) {
+		return service.edit(id);
 	}
 
 	@DeleteMapping(path = { "/id" })

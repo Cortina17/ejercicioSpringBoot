@@ -4,10 +4,15 @@ import java.util.List;
 
 public interface JugadorService {
 
-	List<Jugador> registrar();
+	List<Jugador> listar();
 
-	Jugador registrar(int id);
+	Jugador add(int id);
+	
+	Jugador edit(int id);
 
+	Jugador listarId(int id);
+	
 	Jugador delete(int id);
+	
 
 }
